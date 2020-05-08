@@ -16,8 +16,8 @@ import spendreport.v.bounded.TransactionSourceBounded;
  * 配置文件没生效，手动设置配置，代码中设置配置
  * 方便本地地调试，否则，报超时异常
  */
-public class v6 {
-	private static final Logger LOG = LoggerFactory.getLogger(v6.class);
+public class ExecutionPlanRun {
+	private static final Logger LOG = LoggerFactory.getLogger(ExecutionPlanRun.class);
 
 	public static void main(String[] args) throws Exception {
 
@@ -53,9 +53,10 @@ public class v6 {
 		});
 
 
-		env.execute("诈骗检测");
+		//env.execute("诈骗检测");
 		System.out.println("============完成============");
 
+		System.out.println("执行计划:\n"+env.getExecutionPlan().toString());
 
 
 	}
